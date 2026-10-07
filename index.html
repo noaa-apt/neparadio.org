@@ -1,92 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redirecting...</title>
-<style>
-body {
-    margin: 0;
-    font-family: system-ui, sans-serif;
-    background: #111;
-    color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-}
-.box {
-    max-width: 400px;
-    padding: 20px;
-}
-.count {
-    font-size: 3rem;
-    margin: 20px 0;
-}
-.bar {
-    height: 4px;
-    background: #333;
-    border-radius: 4px;
-    overflow: hidden;
-}
-.bar-fill {
-    height: 100%;
-    width: 0%;
-    background: #4f9cff;
-}
-a {
-    color: #4f9cff;
-    text-decoration: none;
-}
-</style>
+    <meta http-equiv="refresh" content="0; url=https://nepafreq.org/">
+    <title>Redirecting...</title>
 </head>
 <body>
-<div class="box">
-    <h1>Redirecting</h1>
-    <p>This is a redirect to www.nepafreq.org</p>
-    <div class="count" id="count">3</div>
-    <div class="bar">
-        <div class="bar-fill" id="bar"></div>
-    </div>
-    <p>
-        If nothing happens,
-        <a href="#" id="manual">click here</a>.
-    </p>
-    <p id="status" style="opacity:0;">Redirecting...</p>
-</div>
-<script>
-const originalURL = "https://nepafreq.org";
-let timeLeft = 3;
-let redirected = false;
-const countEl = document.getElementById("count");
-const barEl = document.getElementById("bar");
-const statusEl = document.getElementById("status");
-
-function redirectNow() {
-    if (redirected) return;
-    redirected = true;
-    statusEl.style.opacity = "1";
-    window.location.href = originalURL;
-}
-const timer = setInterval(() => {
-    timeLeft--;
-    countEl.textContent = timeLeft;
-
-    if (timeLeft <= 0) {
-        clearInterval(timer);
-        redirectNow();
-    }
-}, 1000);
-setTimeout(() => {
-    barEl.style.transition = "width 3s linear";
-    barEl.style.width = "100%";
-}, 50);
-document.getElementById("manual").addEventListener("click", (e) => {
-    e.preventDefault();
-    clearInterval(timer);
-    redirectNow();
-});
-</script>
+    <p>Redirecting...</p>
 </body>
-</html> 
+</html>
